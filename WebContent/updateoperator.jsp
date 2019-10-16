@@ -54,7 +54,7 @@
 <div class="topnav">
   
   <div class="search-container">
-    <form action=" ">
+    <form action="Mainservlet?action=updateoperator" method="post">
       <input type="text" placeholder="Enter Operator ID" name="Enter Operator ID">
       
        </form>

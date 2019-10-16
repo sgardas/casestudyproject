@@ -49,7 +49,7 @@
             </div>
             <div class="hpanel">
                 <div class="panel-body">
-                        <form action="#" id="loginForm">
+                        <form action="Mainservlet?action=operatorcreation" method="post">
                             
                             <div class="form-group">
                                 <label class="control-label" for="firstname">Firstname</label>
@@ -82,11 +82,11 @@
                                 <input type="text" placeholder="enter maximum no of customers to be managed" title="Please enter maximum number of customers to be managed" required="" value="" name="max no of customers" id="max customers" class="form-control">
                             </div> 
                             <div class="form-group">
-                                <label class="control-label" for="creation date">Creation date</label>
-                                <input type="text" placeholder="enter your Creation date" title="Please enter your creation date" required="" value="" name="creation date" id="creation date" class="form-control">
+                                <label class="control-label" for="creationdate">Creation date</label>
+                                <input type="text" placeholder="enter your Creation date" title="Please enter your creation date" required="" value="" name="creationdate" id="creationdate" class="form-control">
                             </div> 
+                            <input type="submit" class="btn btn-success btn-block" onclick="myFunction()" value="Create me!" >
                             
-                            <button class="btn btn-success btn-block" onclick="myFunction()">Create me!</button>
                         </form>
                 </div>
             </div>
