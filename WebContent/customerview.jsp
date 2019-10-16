@@ -2,14 +2,14 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
+<head><h1>Customer Details Below</h1>
 
  <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Page title -->
-    <title>DTH | DeleteCustomerPage</title>
+    <title>DTH | Customer view</title>
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!--<link rel="shortcut icon" type="image/ico" href="favicon.ico" />-->
@@ -43,20 +43,16 @@
             
             <div class="panel-body float-e-margins" >
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
 </head>
 <body bgcolor="lightblue">
 <div>
-<marquee>Customer Deletion</marquee>
 </div>
 <hr>
 <div align="center">
 <form name="log" action="<%=request.getContextPath()%>/InfinityController?actionCheck=login" method="post">
-Customer Id <input type="text" name="custId" value="" required title="Enter customerId" placeholder="Enter CustomerId" onmouseover="javascript.alert('title')"/>
+Customer Id <input type="text" name="custId" value="" required title="Enter customerId" value=""required placeholder="Enter CustomerId" onmouseover="javascript.alert('title')"/>
  <br><br>
- <button onclick="window.location.href='Deletion_success_page.jsp'">Delete Customer</button>
- 
- 
+                            <button onclick="window.location.href='customer_display.jsp'">View</button>
 
  </form>
  </div>
