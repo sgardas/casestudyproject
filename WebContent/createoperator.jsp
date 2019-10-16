@@ -59,9 +59,10 @@
                                 <label class="control-label" for="lastname">Lastname</label>
                                 <input type="text" title="Please enter your lastname" placeholder="enter your lastname" required="" value="" name="lastname" id="lastname" class="form-control">
                             </div>   
+                            
                             <div class="form-group">
                                 <label class="control-label" for="emailid">Email Id</label>
-                                <input type="text" placeholder="example@gmail.com" title="enter your email id" required="" value="" name="email" id="email" class="form-control">
+                                <input type="email" placeholder="example@gmail.com" title="enter your email id" required="" value="" name="email" id="email" class="form-control">
                                 
                             </div>   
                             <div class="form-group">
@@ -92,6 +93,7 @@
             </div>
         </div>
     </div>
+   
     <div class="row">
         <div class="col-md-12 text-center">
     </div>
