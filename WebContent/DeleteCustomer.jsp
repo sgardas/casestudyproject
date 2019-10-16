@@ -54,7 +54,9 @@
 <form name="log" action="<%=request.getContextPath()%>/InfinityController?actionCheck=login" method="post">
 Customer Id <input type="text" name="custId" value="" required title="Enter customerId" placeholder="Enter CustomerId" onmouseover="javascript.alert('title')"/>
  <br><br>
-<input type="submit" value="Delete Customer"/>
+ <button onclick="window.location.href='Deletion_success_page.jsp'">Delete Customer</button>
+ 
+ 
 
  </form>
  </div>
