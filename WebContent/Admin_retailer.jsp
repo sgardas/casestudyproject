@@ -52,32 +52,32 @@
                             <div>
 			<div class="form-group">
                                 <label class="control-label" for="contact">Retailer Contact2</label>
-                                <input type="password" title="Please enter your contact" required="" value="" name="contact" id="contact" class="form-control">
+                                <input type="password" title="Please enter your contact"  value="" name="contact" id="contact" class="form-control">
                                 
                             </div>
 			<div class="form-group">
                                 <label class="control-label" for="address">Retailer Address1</label>
-                                <input type="password" title="Please enter your address"  required="" value="" name="address" id="address" class="form-control">
+                                <input type="password" title="Please enter your address"   value="" name="address" id="address" class="form-control">
                                 
                             </div>
 			<div class="form-group">
                                 <label class="control-label" for="address">Retailer Address2</label>
-                                <input type="password" title="Please enter your address"  required="" value="" name="address" id="address" class="form-control">
+                                <input type="password" title="Please enter your address"   value="" name="address" id="address" class="form-control">
                                 
                             </div>
 			<div class="form-group">
                                 <label class="control-label" for="zipcode">Zipcode</label>
-                                <input type="password" title="Please enter your zipcode" required="" value="" name="zipcode" id="zipcode" class="form-control">
+                                <input type="password" title="Please enter your zipcode" value="" name="zipcode" id="zipcode" class="form-control">
                                 
                             </div>
 			<div class="form-group">
                                 <label class="control-label" for="city">City</label>
-                                <input type="password" title="Please enter your city" required="" value="" name="city" id="city" class="form-control">
+                                <input type="password" title="Please enter your city"  value="" name="city" id="city" class="form-control">
                                 
                             </div>
 			<div class="form-group">
                                 <label class="control-label" for="state">State</label>
-                                <input type="password" title="Please enter your state" required="" value="" name="state" id="state" class="form-control">
+                                <input type="password" title="Please enter your state" value="" name="state" id="state" class="form-control">
                                 
                             </div>
 							</div><br> 
