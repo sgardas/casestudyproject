@@ -57,7 +57,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="control-label" for="lastname">Lastname</label>
-                                <input type="password" title="Please enter your lastname" placeholder="enter your lastname" required="" value="" name="lastname" id="lastname" class="form-control">
+                                <input type="text" title="Please enter your lastname" placeholder="enter your lastname" required="" value="" name="lastname" id="lastname" class="form-control">
                             </div>   
                             <div class="form-group">
                                 <label class="control-label" for="emailid">Email Id</label>
@@ -134,7 +134,7 @@
 }
 </style>
 
-<button class="button" onclick="myFunction()"><span>Sign In </span></button>
+<button class="button" onclick="myFunction()"><span>Create me!! </span></button>
                       
                         </form>
                 </div>

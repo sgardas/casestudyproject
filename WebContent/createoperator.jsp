@@ -61,16 +61,16 @@
                             </div>   
                             <div class="form-group">
                                 <label class="control-label" for="emailid">Email Id</label>
-                                <input type="text" placeholder="example@gmail.com" title="enter your email id" required="" value="" name="email" id="email" class="form-control">
+                                <input type="email" placeholder="example@gmail.com" title="enter your email id" required="" value="" name="email" id="email" class="form-control">
                                 
                             </div>   
                             <div class="form-group">
-                                <label class="control-label" for="phoneno">Phone number</label>
-                                <input type="text" placeholder="enter your phone no" title="Please enter your Phone no" required="" value="" name="phonenum" id="phonenum" class="form-control">
+                                <label class="control-label" for="phoneno">Phone number (format: xxx-xxx-xxxx)</label>
+                                <input type="tel" pattern="^\d{3}-\d{3}-\d{4}$" required placeholder="enter your phone no" title="Please enter your Phone no" required="" value="" name="phonenum" id="phonenum" class="form-control">
                             </div>  
                             <div class="form-group">
-                                <label class="control-label" for="shift start time">Shift Start time</label>
-                                <input type="text" placeholder="enter your Shift start time" title="Please enter your shift start time" required="" value="" name="shift start time" id="shift start time" class="form-control">
+                                <label class="control-label" for="shift start time">Shift Start time </label>
+                                <input type="text"  pattern="" placeholder="enter your Shift start time" title="Please enter your shift start time" required="" value="" name="shift start time" id="shift start time" class="form-control">
                             </div> 
                             <div class="form-group">
                                 <label class="control-label" for="shift End time">Shift End time</label>
@@ -82,9 +82,10 @@
                                 <input type="text" placeholder="enter maximum no of customers to be managed" title="Please enter maximum number of customers to be managed" required="" value="" name="max no of customers" id="max customers" class="form-control">
                             </div> 
                             <div class="form-group">
-                                <label class="control-label" for="creationdate">Creation date</label>
-                                <input type="text" placeholder="enter your Creation date" title="Please enter your creation date" required="" value="" name="creationdate" id="creationdate" class="form-control">
+                                <label class="control-label" for="creationdate">Creation date Format: DD.MM.YYYY</label>
+                                <input type="date" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}" required placeholder="enter your Creation date" title="Please enter your creation date" required="" value="" name="creationdate" id="creationdate" class="form-control">
                             </div> 
+
                             <style>
 .button {
   border-radius: 4px;
@@ -128,8 +129,15 @@
 
 <button class="button" onclick="myFunction()"><span>Create Me!</span></button>
                          
-                            <input type="submit" class="btn btn-success btn-block" onclick="myFunction()" value="Create me!" >
+
+
                             
+                            
+
+
+                            
+                            
+
                         </form>
                 </div>
             </div>
