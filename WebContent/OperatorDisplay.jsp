@@ -13,10 +13,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Page title -->
-    <title>UpdateCustomerPage</title>
+    <title>DTH | OperatorDisplayPage</title>
 
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!--<link rel="shortcut icon" type="image/ico" href="favicon.ico" />-->
 
     <!-- Vendor styles -->
     <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css" />
@@ -45,54 +43,52 @@
     <div class="row">
         <div class="col-md-12">
             <div class="text-center m-b-md">
-                <h3>UPDATE CUSTOMER</h3>
+                <h3>OPERATOR DETAILS</h3>
             </div>
             <div class="hpanel">
                 <div class="panel-body">
                         <form action="#" id="loginForm">
                             <div class="form-group">
-                                <label class="control-label" for="customerId">Customer Id</label>
-                                <input type="text"  title="enter you customerId" placeholder="enter your customerId" required="" value="" name="customerId" id="customerId" class="form-control">
+                                <label class="control-label" for="Operator ID">Customer Id</label>
+                                <input type="text" value="" name="Operator ID" id="customerId" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label class="control-label" for="firstname">Firstname</label>
-                                <input type="text" title="Please enter your firstname" placeholder="enter your firstname" required="" value="" name="firstname" id="firstname" class="form-control">                         
+                                <input type="text" value="" name="firstname" id="firstname" class="form-control">                         
                             </div>
                             <div class="form-group">
                                 <label class="control-label" for="lastname">Lastname</label>
-                                <input type="password" title="Please enter your lastname" placeholder="enter your lastname" required="" value="" name="lastname" id="lastname" class="form-control">
+                                <input type="password" value="" name="lastname" id="lastname" class="form-control">
                             </div>   
                             <div class="form-group">
                                 <label class="control-label" for="emailid">Email Id</label>
-                                <input type="text" placeholder="example@gmail.com" title="enter your email id" required="" value="" name="email" id="email" class="form-control">
+                                <input type="text" value="" name="email" id="email" class="form-control">
                                 
                             </div>   
                             <div class="form-group">
                                 <label class="control-label" for="phoneno">Phone number</label>
-                                <input type="text" placeholder="enter your phone no" title="Please enter your Phone no" required="" value="" name="phonenum" id="phonenum" class="form-control">
+                                <input type="text" value="" name="phonenum" id="phonenum" class="form-control">
                             </div>  
                             <div class="form-group">
-                                <label class="control-label" for="Address">Address</label>
-                                <input type="text" placeholder="enter your address" title="Please enter your address" required="" value="" name="address" id="address" class="form-control">
+                                <label class="control-label" for="Shift Time Start Date">Shift Time Start Date</label>
+                                <input type="text"  value="" name="Shift Time Start Date" id="Shift Time Start Date" class="form-control">
                             </div> 
                             <div class="form-group">
-                                <label class="control-label" for="Landmark">Landmark</label>
-                                <input type="text" placeholder="enter your landmark" title="Please enter your landmark" required="" value="" name="landmark" id="landmark" class="form-control">
+                                <label class="control-label" for="Shift Time End Date">Shift Time End Date</label>
+                                <input type="text" value="" name="Shift Time End Date" id="Shift Time End Date" class="form-control">
                             </div> 
                             <div class="form-group">
-                                <label class="control-label" for="state">State</label>
-                                <input type="text" placeholder="enter your state" title="Please enter your state" required="" value="" name="state" id="state" class="form-control">
+                                <label class="control-label" for="Maximum Customers">Maximum Customers</label>
+                                <input type="text" value="" name="Maximum Customers" id="Maximum Customers" class="form-control">
                             </div> 
                             <div class="form-group">
-                                <label class="control-label" for="city">City</label>
-                                <input type="text" placeholder="enter your city" title="Please enter your city" required="" value="" name="city" id="city" class="form-control">
+                                <label class="control-label" for="Creation Date">Creation Date</label>
+                                <input type="text" value="" name="Creation Date" id="Creation Date" class="form-control">
                             </div> 
-                            <div class="form-group">
-                                <label class="control-label" for="Zipcode">Zipcode</label>
-                                <input type="text" placeholder="enter your zipcode" title="Please enter your zipcode" required="" value="" name="zipcode" id="zipcode" class="form-control">
-                            </div> 
+                           
                             
-                            <button class="btn btn-success btn-block" onclick="myFunction()">Update</button>
+                            <button class="btn btn-success btn-block" onclick="window.location.href='viewoperator.jsp'">SEARCH OTHER OPERATORS</button>
+                     
                         </form>
                 </div>
             </div>
