@@ -132,6 +132,10 @@
 
 <button class="button" onclick="window.location.href='ViewCustomer.jsp'"><span>Search Other Customers</span></button>
                             
+<<<<<<< HEAD
+=======
+                            <button class="btn btn-success btn-block" onclick="window.location.href='customerview.jsp'">SEARCH OTHER CUSTOMERS</button>
+>>>>>>> ead1fba9982bb164b7745983567c2747937f1b4e
                      
                         </form>
                 </div>
