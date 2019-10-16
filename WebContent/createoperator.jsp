@@ -59,23 +59,22 @@
                                 <label class="control-label" for="lastname">Lastname</label>
                                 <input type="text" title="Please enter your lastname" placeholder="enter your lastname" required="" value="" name="lastname" id="lastname" class="form-control">
                             </div>   
-                            
                             <div class="form-group">
                                 <label class="control-label" for="emailid">Email Id</label>
-                                <input type="email" placeholder="example@gmail.com" title="enter your email id" required="" value="" name="email" id="email" class="form-control">
+                                <input type="text" placeholder="example@gmail.com" title="enter your email id" required="" value="" name="email" id="email" class="form-control">
                                 
                             </div>   
                             <div class="form-group">
-                                <label class="control-label" for="phoneno">Phone number (format: xxx-xxx-xxxx)</label>
-                                <input type="tel"  pattern="^\d{3}-\d{3}-\d{4}$" required placeholder="enter your phone no" title="Please enter your Phone no" required="" value="" name="phonenum" id="phonenum" class="form-control">
+                                <label class="control-label" for="phoneno">Phone number</label>
+                                <input type="text" placeholder="enter your phone no" title="Please enter your Phone no" required="" value="" name="phonenum" id="phonenum" class="form-control">
                             </div>  
                             <div class="form-group">
-                                <label class="control-label" for="shift start time">Shift Start time Format: DD.MM.YYYY</label>
-                                <input type="text" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}" id="24h"/ placeholder="enter your Shift start time" title="Please enter your shift start time" required="" value="" name="shift start time" id="shift start time" class="form-control">
+                                <label class="control-label" for="shift start time">Shift Start time</label>
+                                <input type="text" placeholder="enter your Shift start time" title="Please enter your shift start time" required="" value="" name="shift start time" id="shift start time" class="form-control">
                             </div> 
                             <div class="form-group">
-                                <label class="control-label" for="shift End time">Shift End time Format: DD.MM.YYYY</label>
-                                <input type="text" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}" placeholder="enter your Shift end time" title="Please enter your shift end time" required="" value="" name="shift end time" id="shift end time" class="form-control">
+                                <label class="control-label" for="shift End time">Shift End time</label>
+                                <input type="text" placeholder="enter your Shift end time" title="Please enter your shift end time" required="" value="" name="shift end time" id="shift end time" class="form-control">
                             </div>
                             
                             <div class="form-group">
@@ -134,7 +133,6 @@
             </div>
         </div>
     </div>
-   
     <div class="row">
         <div class="col-md-12 text-center">
     </div>
