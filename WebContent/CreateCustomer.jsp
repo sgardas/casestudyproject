@@ -49,11 +49,8 @@
             </div>
             <div class="hpanel">
                 <div class="panel-body">
-                        <form action="#" id="loginForm">
-                            <div class="form-group">
-                                <label class="control-label" for="customerId">Customer Id</label>
-                                <input type="text"  title="enter you customerId" placeholder="enter your customerId" required="" value="" name="customerId" id="customerId" class="form-control">
-                            </div>
+                        <form action="Mainservlet?action=createcustomer" method="post">
+                            
                             <div class="form-group">
                                 <label class="control-label" for="firstname">Firstname</label>
                                 <input type="text" title="Please enter your firstname" placeholder="enter your firstname" required="" value="" name="firstname" id="firstname" class="form-control">                         
@@ -91,6 +88,10 @@
                                 <label class="control-label" for="Zipcode">Zipcode</label>
                                 <input type="text" placeholder="enter your zipcode" title="Please enter your zipcode" required="" value="" name="zipcode" id="zipcode" class="form-control">
                             </div> 
+                            <div class="form-group">
+                                <label class="control-label" for="creationdate">Creation date</label>
+                                <input type="text" placeholder="enter your Creation date" title="Please enter your creation date" required="" value="" name="creationdate" id="creationdate" class="form-control">
+                            </div>
                             
                             <style>
 .button {

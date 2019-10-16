@@ -70,7 +70,6 @@ public class Mainservlet extends HttpServlet {
 	  			}else 
 	  				{
 		  				try {
-		  					System.out.println("Entered here");
 							qc.validate_login(request, response);
 						} catch (ClassNotFoundException e) {
 							// TODO Auto-generated catch block
@@ -168,6 +167,32 @@ public class Mainservlet extends HttpServlet {
 			}
 	      }
 	
+	      
+	      else if(action.equalsIgnoreCase("createcustomer")){
+	    	  try {
+				qc.customer_create(request,response);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	      }
+	      
+	      else if(action.equalsIgnoreCase("searchcustomer")){
+	    	  try {
+				qc.customer_search(request,response);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	      }
+	      
+	      
 	
 	
 	}

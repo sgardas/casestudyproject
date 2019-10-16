@@ -94,7 +94,6 @@ public void validate_login(HttpServletRequest request, HttpServletResponse respo
 	/*------------ All the sql methods --------------*/
 public void create_operator(HttpServletRequest request,HttpServletResponse response) throws ClassNotFoundException, SQLException, ServletException, IOException{
 	
-	System.out.println("entered into create method");
 	String First_Name =  request.getParameter("firstname");
 	String Last_Name =  request.getParameter("lastname");
 	String Email =  request.getParameter("email");
@@ -213,6 +212,85 @@ public void create_operator(HttpServletRequest request,HttpServletResponse respo
 		
 
 	}
+	
+	public void customer_create(HttpServletRequest request,HttpServletResponse response) throws ClassNotFoundException, SQLException, ServletException, IOException
+	{
+		
+		String First_Name =  request.getParameter("firstname");
+		String Last_Name =  request.getParameter("lastname");
+		String Email =  request.getParameter("email");
+		String Phone_No =  request.getParameter("phonenum");
+		String Address =  request.getParameter("address");
+		String Landmark =request.getParameter("landmark");
+		String State =  request.getParameter("state");
+		String City =  request.getParameter("city");
+		String ZipCode =  request.getParameter("zipcode");
+		String Creation_Date =  request.getParameter("creationdate");
+	    String query = "insert into customer values(customer_id_seq.nextval,?,?,?,?,?,?,?,?,?,?,?,?)";
+
+	    
+
+	    
+	    st = con.prepareStatement(query);
+	   
+	    st.setNull(1, java.sql.Types.INTEGER);
+	    st.setString(2, First_Name);
+	    st.setString(3, Last_Name);
+	    st.setString(4, Email);
+	    st.setInt(5, Integer.parseInt(Phone_No));
+	    st.setString(6, Address);
+	    st.setString(7, Landmark);
+	    st.setString(8, State); 
+	    st.setString(9, City);
+	    st.setString(10, ZipCode);
+	    st.setString(11, Creation_Date);
+	    st.setNull(12, java.sql.Types.INTEGER);
+	   
+	    int i = st.executeUpdate();
+	    
+		if(i>0) {
+			rd=request.getRequestDispatcher("Adminhomepage.jsp");
+			rd.include(request, response);
+		}
+		else
+			System.out.println("customer not created");
+	    
+	    
+	}
+
+	public void customer_search(HttpServletRequest request,HttpServletResponse response) throws ClassNotFoundException, SQLException
+	{
+		String Customer_Id =  request.getParameter("custId");
+		
+	    String query = "select * from customer where Customer_Id= ?";
+
+	    
+
+	    
+	    st = con.prepareStatement(query);
+	    st.setInt(1,Integer.parseInt(Customer_Id));
+	    
+	    rs=st.executeQuery();
+	    while(rs.next())
+	    {
+	        System.out.print(rs.getInt(1));
+	        System.out.print("-------"+rs.getInt(2));
+	        System.out.print("------"+rs.getString(3));
+	        System.out.print("------"+rs.getString(4));
+	        System.out.print("------"+rs.getString(5));
+	        System.out.print("------"+rs.getInt(6));
+	        System.out.print("------"+rs.getString(7));
+	        System.out.print("------"+rs.getString(8));
+	        System.out.print("------"+rs.getString(9));
+	        System.out.print("------"+rs.getString(10));
+	        System.out.print("------"+rs.getInt(11));
+	        System.out.print("------"+rs.getString(12));
+	        System.out.println("------"+rs.getInt(13));
+	    }
+	  
+	   
+	}
+	
 	
 	
 	/*-----------------------------------------------*/
