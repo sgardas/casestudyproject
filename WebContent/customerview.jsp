@@ -50,7 +50,7 @@
 <hr>
 <div align="center">
 <form name="log" action="<%=request.getContextPath()%>/InfinityController?actionCheck=login" method="post">
-Customer Id <input type="text" name="custId" value="" required title="Enter customerId" placeholder="Enter CustomerId" onmouseover="javascript.alert('title')"/>
+Customer Id <input type="text" name="custId" value="" required title="Enter customerId" value=""required placeholder="Enter CustomerId" onmouseover="javascript.alert('title')"/>
  <br><br>
                             <button onclick="window.location.href='customer_display.jsp'">View</button>
 
