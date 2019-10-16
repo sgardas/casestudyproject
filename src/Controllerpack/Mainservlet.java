@@ -22,7 +22,6 @@ public class Mainservlet extends HttpServlet {
        
    //<span class="caret"></span>
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("keerthi");
 	    String action= request.getParameter("action");
 	    String passworddet= request.getParameter("password");
 	    String role=request.getParameter("Role");
@@ -192,6 +191,29 @@ public class Mainservlet extends HttpServlet {
 			}
 	      }
 	      
+	      else if(action.equalsIgnoreCase("customerupdate")){
+	    	  try {
+				qc.customer_update(request,response);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	      }
+	      
+	      else if(action.equalsIgnoreCase("customerdelete")){
+	    	  try {
+				qc.customer_delete(request,response);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	      }
 	      
 	
 	

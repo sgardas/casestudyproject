@@ -291,6 +291,77 @@ public void create_operator(HttpServletRequest request,HttpServletResponse respo
 	   
 	}
 	
+	public void customer_update(HttpServletRequest request,HttpServletResponse response) throws ClassNotFoundException, SQLException, ServletException, IOException
+	{
+		String Customer_Id =  request.getParameter("customerId");
+		String Operator_Id =  request.getParameter("operatorId");
+		String First_Name =  request.getParameter("firstname");
+		String Last_Name =  request.getParameter("lastname");
+		String Email =  request.getParameter("email");
+		String Phone_No =  request.getParameter("phonenum");
+		String Address =  request.getParameter("address");
+		String Landmark = request.getParameter("landmark");
+		String State =  request.getParameter("state");
+		String City =  request.getParameter("city");
+		String ZipCode =  request.getParameter("zipcode");
+		String Creation_Date =  request.getParameter("creationdate");
+		String Retailor_Id =  request.getParameter("retailerId");
+	    String query = "update customer set Operator_Id= ?,First_Name=?,Last_Name=?,Email=?,Phone_No=?,Address=?,Landmark=?,State=?,City=?,Zipcode=?,Creation_Date=?, Retailer_Id=?"
+	    		+ "where customer_id =?	";
+
+	    
+
+	    
+	    st = con.prepareStatement(query);
+	    
+	    
+	    st.setInt(1, Integer.parseInt(Operator_Id));
+	    st.setString(2, First_Name);
+	    st.setString(3, Last_Name);
+	    st.setString(4, Email);
+	    st.setInt(5, Integer.parseInt(Phone_No));
+	    st.setString(6, Address);
+	    st.setString(7, Landmark);
+	    st.setString(8, State); 
+	    st.setString(9, City);
+	    st.setString(10, ZipCode);
+	    st.setString(11, Creation_Date);
+	    st.setInt(12, Integer.parseInt(Retailor_Id));
+	    st.setInt(13, Integer.parseInt(Customer_Id));
+	    
+	    
+	    int i = st.executeUpdate();
+		if(i>0) {
+			rd=request.getRequestDispatcher("Adminhomepage.jsp");
+			rd.include(request, response);
+		}
+		else
+			System.out.println("customer not update");
+		
+	}
+
+	public void customer_delete(HttpServletRequest request,HttpServletResponse response) throws ClassNotFoundException, SQLException, ServletException, IOException
+	{
+	String Customer_Id =  request.getParameter("custId");
+		
+		String query = "delete customer where Customer_Id =?";
+		
+		
+		st = con.prepareStatement(query);
+		st.setString(1, Customer_Id);
+		
+		int i = st.executeUpdate();
+	    
+		
+		if(i>0) {
+			rd=request.getRequestDispatcher("Deletion_success_page.jsp");
+			rd.include(request, response);
+		}
+		else
+			System.out.println("customer not deleted");
+	}
+
+
 	
 	
 	/*-----------------------------------------------*/
