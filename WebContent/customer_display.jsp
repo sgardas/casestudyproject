@@ -90,7 +90,7 @@
                                 <input type="text" value="" name="zipcode" id="zipcode" class="form-control">
                             </div> 
                             
-                            <button class="btn btn-success btn-block" onclick="window.location.href='ViewCustomer.jsp'">SEARCH OTHER CUSTOMERS</button>
+                            <button class="btn btn-success btn-block" onclick="window.location.href='customerview.jsp'">SEARCH OTHER CUSTOMERS</button>
                      
                         </form>
                 </div>
