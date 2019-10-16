@@ -30,12 +30,14 @@ public class Mainservlet extends HttpServlet {
 	    querycla qc= new querycla();
 	    int i;
 	    Helperclass hc= new Helperclass();
-	    
+	    //<a class="btn btn-default btn-block" href="#">Register</a>
 	      if(action.equalsIgnoreCase("Afterpasswordreset")) {
 	    	  System.out.println("ks----------");
 	    	  
 	    	  try {
 				qc.login_insert(request);
+				rd=request.getRequestDispatcher("login.jsp");
+  				rd.forward(request, response);
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -43,6 +45,7 @@ public class Mainservlet extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+
 	    	  
 	    	  
 	    	
@@ -51,6 +54,13 @@ public class Mainservlet extends HttpServlet {
 	
 	      if(action.equalsIgnoreCase("login")) {
 	    	  if(role.equalsIgnoreCase("Admin")||role.equalsIgnoreCase("Operator")||role.equalsIgnoreCase("Customer")||role.equalsIgnoreCase("Retailer")) {
+
+	    	}else if(action.equalsIgnoreCase("Customerregistration")) {
+	    		rd=request.getRequestDispatcher("CustomerRegistration.jsp");
+  				rd.forward(request, response);
+	    	}else if(action.equalsIgnoreCase("login")) {
+	    	  if(role.equalsIgnoreCase("Admin")) {
+
 	    		  System.out.println("@@@@@@admin");
 	    		  i= hc.validateattempt(passworddet);
 	    		  

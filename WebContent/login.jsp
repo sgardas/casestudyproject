@@ -29,7 +29,7 @@
    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css" /> 
     <link rel="stylesheet" href="styles/style.css">
 
-</head><div><marquee><strong>Infinity DTH Services</strong></marquee></div>
+</head><div><marquee><strong>ILP DTH Services</strong></marquee></div>
 <body class="blank">
   
 
@@ -67,8 +67,13 @@
                             
                            
                            <input type="submit" class="btn btn-success btn-block" onclick="myFunction()" value="Login" >
-                            <a class="btn btn-default btn-block" href="#">Register</a>
-                        </form>
+                           </form>
+                           <br>
+                           <form action="Mainservlet?action=Customerregistration" method="post">
+                           
+                            <input type="submit" class="btn btn-success btn-block" onclick="myFunction()" value="Register" >
+                           
+                           </form>
                 </div>
             </div>
         </div>

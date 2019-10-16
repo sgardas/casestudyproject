@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Page title -->
-    <title>DTH | Operator Home Page</title>
+    <title>DTH | DeleteCustomerPage</title>
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!--<link rel="shortcut icon" type="image/ico" href="favicon.ico" />-->
@@ -52,7 +52,7 @@
 <hr>
 <div align="center">
 <form name="log" action="<%=request.getContextPath()%>/InfinityController?actionCheck=login" method="post">
-Customer Id <input type="text" name="custId" value="" required title="Enter customerId" placeholder="Enter CustomerId" onmouseover="javascript.alert('title')"/>
+Customer Id <input type="text" name="custId" value= required title="Enter customerId" placeholder="Enter CustomerId" onmouseover="javascript.alert('title')"/>
  <br><br>
 <input type="submit" value="Delete Customer"/>
 
