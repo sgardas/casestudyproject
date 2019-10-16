@@ -94,14 +94,7 @@ public void validate_login(HttpServletRequest request, HttpServletResponse respo
 	/*------------ All the sql methods --------------*/
 public void create_operator(HttpServletRequest request,HttpServletResponse response) throws ClassNotFoundException, SQLException, ServletException, IOException{
 	
-	System.out.println(request.getParameter("firstname"));
-	System.out.println(request.getParameter("lastname"));
-	System.out.println(request.getParameter("email"));
-	System.out.println(request.getParameter("phonenum"));
-	System.out.println(request.getParameter("shift start time"));
-	System.out.println(request.getParameter("shift end time"));
-	System.out.println(request.getParameter("max no of customers"));
-	System.out.println(request.getParameter("creationdate"));
+	System.out.println("entered into create method");
 	String First_Name =  request.getParameter("firstname");
 	String Last_Name =  request.getParameter("lastname");
 	String Email =  request.getParameter("email");

@@ -85,7 +85,6 @@
                                 <label class="control-label" for="creationdate">Creation date</label>
                                 <input type="text" placeholder="enter your Creation date" title="Please enter your creation date" required="" value="" name="creationdate" id="creationdate" class="form-control">
                             </div> 
-<<<<<<< HEAD
                             <style>
 .button {
   border-radius: 4px;
@@ -129,10 +128,8 @@
 
 <button class="button" onclick="myFunction()"><span>Create Me!</span></button>
                          
-=======
                             <input type="submit" class="btn btn-success btn-block" onclick="myFunction()" value="Create me!" >
                             
->>>>>>> 96ad6fcd75a1ff6d03fd90d8fe1b1cc1c21c0dc4
                         </form>
                 </div>
             </div>
