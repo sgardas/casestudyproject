@@ -1,19 +1,19 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!DOCTYPE html>
 <html>
-<head><h1> Update Customer Page</h1>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>UpdateCustomerPage</title>
-</head>
+<head>
+<script>
 
 
-<meta charset="utf-8">
+</script>
+
+
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Page title -->
-    <title>DTH | Retailer Deletion Page</title>
+    <title>UpdateCustomerPage</title>
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!--<link rel="shortcut icon" type="image/ico" href="favicon.ico" />-->
@@ -26,45 +26,81 @@
 
     <!-- App styles -->
     <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" />
-    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css" />
+   <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css" /> 
     <link rel="stylesheet" href="styles/style.css">
 
-</head>
-<body class="fixed-navbar fixed-sidebar">
+</head><div><marquee><strong>Infinity DTH Services</strong></marquee></div>
+<body class="blank">
+  
+<!-- Simple splash screen-->
+<!--  <div class="splash"> <div class="color-line"></div><div class="splash-title"><h1>Homer - Responsive Admin Theme</h1><p>Special Admin Theme for small and medium webapp with very clean and aesthetic style and feel. </p><div class="spinner"> <div class="rect1"></div> <div class="rect2"></div> <div class="rect3"></div> <div class="rect4"></div> <div class="rect5"></div> </div> </div> </div>-->
+<!--[if lt IE 7]>
+<p class="alert alert-danger">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]--> 
+
+<div class="color-line"></div>
 
 
-    <div class="color-line">
-    
-
-<hr>
-<div align="center">
-<form name="log" action="<%=request.getContextPath()%>/InfinityController?actionCheck=login" method="post">
-Customer Id  <input type="text" name="custId" value="" required title="Enter custId" placeholder="Enter customer Id" onmouseover="javascript.alert('title')"/>
-<br></br>
-First name <input type="text" name="firstname" value="" required title="Enter firstname" placeholder="Enter firstname" onmouseover="javascript.alert('title')"/>
- <br><br>
-Last name <input type="text" name="lastname" value="" required title="Enter lastname" placeholder="Enter lastname" onmouseover="javascript.alert('title')"/>
-<br><br>
-Email Id  <input type="email" name="emailid" value="" required title="Enter email" placeholder="Enter your email" onmouseover="javascript.alert('title')"/>
-<br></br>
-Phone Number  <input type="text" name="Phoneno" value="" required title="Enter lastname" placeholder="Enter phone number" onmouseover="javascript.alert('title')"/>
-<br></br>
-Address  <input type="text" name="address" value="" required title="Enter address" placeholder="Enter address" onmouseover="javascript.alert('title')"/>
-<br></br>
-Landmark  <input type="text" name="landmark" value="" required title="Enter landmark" placeholder="Enter landmark" onmouseover="javascript.alert('title')"/>
-<br></br>
-State  <input type="text" name="state" value="" required title="Enter state" placeholder="Enter state" onmouseover="javascript.alert('title')"/>
-<br></br>
-City  <input type="text" name="city" value="" required title="Enter city" placeholder="Enter city" onmouseover="javascript.alert('title')"/>
-<br></br>
-Zipcode  <input type="text" name="zipcode" value="" required title="Enter zipcode" placeholder="Enter zipcode" onmouseover="javascript.alert('title')"/>
-<br></br>
-
-
-<input type="submit" value="Update"/>
-
- </form>
- </div>
-
+<div class="login-container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="text-center m-b-md">
+                <h3>UPDATE CUSTOMER</h3>
+            </div>
+            <div class="hpanel">
+                <div class="panel-body">
+                        <form action="#" id="loginForm">
+                            <div class="form-group">
+                                <label class="control-label" for="customerId">Customer Id</label>
+                                <input type="text"  title="enter you customerId" placeholder="enter your customerId" required="" value="" name="customerId" id="customerId" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="firstname">Firstname</label>
+                                <input type="text" title="Please enter your firstname" placeholder="enter your firstname" required="" value="" name="firstname" id="firstname" class="form-control">                         
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="lastname">Lastname</label>
+                                <input type="password" title="Please enter your lastname" placeholder="enter your lastname" required="" value="" name="lastname" id="lastname" class="form-control">
+                            </div>   
+                            <div class="form-group">
+                                <label class="control-label" for="emailid">Email Id</label>
+                                <input type="text" placeholder="example@gmail.com" title="enter your email id" required="" value="" name="email" id="email" class="form-control">
+                                
+                            </div>   
+                            <div class="form-group">
+                                <label class="control-label" for="phoneno">Phone number</label>
+                                <input type="text" placeholder="enter your phone no" title="Please enter your Phone no" required="" value="" name="phonenum" id="phonenum" class="form-control">
+                            </div>  
+                            <div class="form-group">
+                                <label class="control-label" for="Address">Address</label>
+                                <input type="text" placeholder="enter your address" title="Please enter your address" required="" value="" name="address" id="address" class="form-control">
+                            </div> 
+                            <div class="form-group">
+                                <label class="control-label" for="Landmark">Landmark</label>
+                                <input type="text" placeholder="enter your landmark" title="Please enter your landmark" required="" value="" name="landmark" id="landmark" class="form-control">
+                            </div> 
+                            <div class="form-group">
+                                <label class="control-label" for="state">State</label>
+                                <input type="text" placeholder="enter your state" title="Please enter your state" required="" value="" name="state" id="state" class="form-control">
+                            </div> 
+                            <div class="form-group">
+                                <label class="control-label" for="city">City</label>
+                                <input type="text" placeholder="enter your city" title="Please enter your city" required="" value="" name="city" id="city" class="form-control">
+                            </div> 
+                            <div class="form-group">
+                                <label class="control-label" for="Zipcode">Zipcode</label>
+                                <input type="text" placeholder="enter your zipcode" title="Please enter your zipcode" required="" value="" name="zipcode" id="zipcode" class="form-control">
+                            </div> 
+                            
+                            <button class="btn btn-success btn-block" onclick="myFunction()">Update</button>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+    </div>
+</div>
 </body>
 </html>
