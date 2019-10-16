@@ -137,9 +137,8 @@
 
 <button class="button" onclick="myFunction()"><span>Update </span></button>
                           
-=======
+
                             <button onclick="window.location.href='Updation_success_page.jsp'">Update</button>
->>>>>>> ead1fba9982bb164b7745983567c2747937f1b4e
                         </form>
                 </div>
             </div>

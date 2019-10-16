@@ -2,14 +2,12 @@
 <!DOCTYPE html>
 <html>
 <head><h1 align = "center">
-<style>
 
-button-group :hover{
-font-size:350;
-}
-</style>
-ADMIN HOME PAGE
-</h1>
+
+
+ ADMIN HOME PAGE</h1>
+</div>
+</body>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,9 +40,7 @@ ADMIN HOME PAGE
 <div class="row">
         <div class="hpanel">
             <div class="panel-body float-e-margins">
-                <p>
-                    Select action to perform from the drop down menu.
-                </p>
+                <p ALIGN="center">
 
                 <div class="btn-group">
                     <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Operator Management <span class="caret"></span></button>

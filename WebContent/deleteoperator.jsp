@@ -41,6 +41,7 @@ function Deletion()
 {
 	alert("This action Cannot be Undone. Are you Sure?")
 	window.location="Deletion_success_page.jsp"
+	
 	}
 </script>
 <div class="row">

@@ -36,7 +36,7 @@
     <div id="logo" class="light-version">
     </div>
 <script>
-function Deletion()
+function Deletion1()
 {
 	alert("This action Cannot be Undone. Are you Sure?")
 	window.location="Deletion_success_page.jsp"
@@ -52,7 +52,7 @@ function Deletion()
                 </p>
 <body>
 <p>Enter the Retailer ID: <input type="text" name="retid" id="retid" value="" placeholder="Retailer ID">
-<button onclick="Deletion()">Delete</button>
+<button onclick="Deletion1()">Delete</button>
 
 </body>
 </div>
