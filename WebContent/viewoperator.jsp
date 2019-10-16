@@ -54,7 +54,7 @@
 <div class="topnav">
   
   <div class="search-container">
-    <form action="/action_page.php">
+    <form action="Mainservlet?action=searchoperator" method="post">
       <input type="text" placeholder="Enter Operator ID" name="operatorid">
       <button type="submit">Submit</button>
     </form>

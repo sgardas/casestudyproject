@@ -8,8 +8,12 @@
 </head>
 <body>
 <h1>Operator update Form</h1>
-<form action="<%=request.getContextPath()%>/MainServlet?actionCheck=operatorregister" method="post">
+ <form action="Mainservlet?action=updateoperator" method="post">
 			<table style="with: 50%">
+				<tr>
+					<td>Operator_Id</td>
+					<td><input type="text" name="Operator_Id" /></td>
+				</tr>
 				<tr>
 					<td>First Name</td>
 					<td><input type="text" name="first_name" /></td>
@@ -39,6 +43,10 @@
 				<tr>
 					<td>Max. no. of Customers to be managed</td>
 					<td><input type="text" name="max customers" /></td>
+				</tr>
+				<tr>
+					<td>Creation Date</td>
+					<td><input type="text" name="creation date" /></td>
 				</tr>
 				
 				
