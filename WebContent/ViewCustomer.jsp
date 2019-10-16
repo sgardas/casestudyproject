@@ -54,7 +54,7 @@
 <form name="log" >
 <p>Enter the Customer ID: <input type="text" name="custid" value="custid" placeholder="Customer ID">
 
-<button onclick="window.location.href='updatecustomers.jsp'">Add New Retailer</button>
+<button onclick="window.location.href='updatecustomers.jsp'">View</button>
  <br><br>
  
 
