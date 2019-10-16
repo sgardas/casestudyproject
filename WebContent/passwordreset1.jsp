@@ -49,7 +49,7 @@
             </div>
             <div class="hpanel">
                 <div class="panel-body">
-                        <form action="#" id="loginForm">
+                        <form action="Mainservlet?action=Afterpasswordreset"  method="post" id="loginForm">
                             <div class="form-group">
                                 <label class="control-label" for="username">Username</label>
                                 <input type="text" placeholder="example@gmail.com" title="Please enter you username" required="" value="" name="username" id="username" class="form-control">
@@ -67,7 +67,7 @@
                             </div>         
                             
                             <div>
-                            Role <select>name="Role"
+                            Role <select name="Role">
 		<option value="Customer">Customer</option>
 		<option value="Retailer">Retailer</option>
 		<option value="Operator">Operator</option>

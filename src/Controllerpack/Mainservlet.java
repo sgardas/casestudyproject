@@ -45,24 +45,46 @@ public class Mainservlet extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+
+	    	  
+	    	  
+	    	
+	    	  
+	      }
+	
+	      if(action.equalsIgnoreCase("login")) {
+	    	  if(role.equalsIgnoreCase("Admin")||role.equalsIgnoreCase("Operator")||role.equalsIgnoreCase("Customer")||role.equalsIgnoreCase("Retailer")) {
+
 	    	}else if(action.equalsIgnoreCase("Customerregistration")) {
 	    		rd=request.getRequestDispatcher("CustomerRegistration.jsp");
   				rd.forward(request, response);
 	    	}else if(action.equalsIgnoreCase("login")) {
 	    	  if(role.equalsIgnoreCase("Admin")) {
+
 	    		  System.out.println("@@@@@@admin");
 	    		  i= hc.validateattempt(passworddet);
 	    		  
 	    		  if(i==1) {
 	    			rd=request.getRequestDispatcher("passwordreset1.jsp");
 	  				rd.forward(request, response);
-	  			}else {
-	  				rd=request.getRequestDispatcher("Adminhomepage.jsp");
-	  				rd.include(request, response);
+	  			}else 
+	  				{
+		  				try {
+		  					System.out.println("Entered here");
+							qc.validate_login(request, response);
+						} catch (ClassNotFoundException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						} catch (SQLException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+		  			
 	  				
 	  			}
 	    		  
-	    	  }else if(role.equalsIgnoreCase("Operator")) {
+	    	  }
+	    		  else if(role.equalsIgnoreCase("Operator")) {
 	    		  i=hc.validateattempt(passworddet);
                   if(i==1) {
                 	rd=request.getRequestDispatcher("passwordreset1.jsp");
@@ -100,7 +122,7 @@ public class Mainservlet extends HttpServlet {
 	    	  
 	      }else if(action.equalsIgnoreCase("operatorcreation")){
 	    	  try {
-				qc.create_operator(request);
+				qc.create_operator(request,response);
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -110,8 +132,39 @@ public class Mainservlet extends HttpServlet {
 			}
 	      }
 	      
-	      
-	
+	      else if(action.equalsIgnoreCase("searchoperator")){
+	    	  try {
+				qc.search_operator(request,response);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	      }
+	      else if(action.equalsIgnoreCase("updateoperator")){
+	    	  try {
+				qc.update_operator(request,response);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	      }
+	      else if(action.equalsIgnoreCase("deleteoperator")){
+	    	  try {
+				qc.delete_operator(request,response);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	      }
 	
 	
 	

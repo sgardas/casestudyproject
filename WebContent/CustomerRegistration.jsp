@@ -91,8 +91,49 @@
                                 <label class="control-label" for="Zipcode">Zipcode</label>
                                 <input type="text" placeholder="Please confirm your zipcode" title="Please enter your zipcode" required="" value="" name="zipcode" id="zipcode" class="form-control">
                             </div> 
+                            <style>
+.button {
+  border-radius: 4px;
+  background-color: Green;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  width: 370px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+
+<button class="button" onclick="myFunction()"><span>Register Here </span></button>
                             
-                            <button class="btn btn-success btn-block" onclick="myFunction()">Register Here</button>
                         </form>
                 </div>
             </div>
