@@ -84,6 +84,7 @@ public class Mainservlet extends HttpServlet {
 	  			}
 	    		  
 	    	  }
+	    	}
 	    		  else if(role.equalsIgnoreCase("Operator")) {
 	    		  i=hc.validateattempt(passworddet);
                   if(i==1) {
@@ -122,6 +123,7 @@ public class Mainservlet extends HttpServlet {
 	    	  
 	      }else if(action.equalsIgnoreCase("operatorcreation")){
 	    	  try {
+	    		  System.out.println("in mainservlet");
 				qc.create_operator(request,response);
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
@@ -171,3 +173,4 @@ public class Mainservlet extends HttpServlet {
 	}
 
 }
+

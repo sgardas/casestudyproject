@@ -130,7 +130,12 @@
 <button class="button" onclick="myFunction()"><span>Create Me!</span></button>
                          
 
+
                             
+                            
+
+
+                            <input type="submit" class="btn btn-success btn-block" onclick="myFunction()" value="Create me!" >
                             
 
                         </form>
