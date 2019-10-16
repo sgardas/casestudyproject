@@ -98,7 +98,7 @@ ADMIN HOME PAGE
                     <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Manage Set-Top Boxes <span class="caret"></span></button>
                     <ul class="dropdown-menu">
                         <li><a href="#">Create SetTopbox</a></li>
-                        <li><a href="#" class="font-bold">Update Update SetTopBox</a></li>
+                        <li><a href="#" class="font-bold"> Update SetTopBox</a></li>
                         
                     </ul>
              </div>
