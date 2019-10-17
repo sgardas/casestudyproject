@@ -11,6 +11,7 @@ Phone_No number Not Null
 
 --Customer
 
+
 create table customer(
 Customer_Id number primary key,
 Operator_Id number,
@@ -19,9 +20,11 @@ Last_Name varchar(30) not null,
 Email varchar(50) not null,
 Phone_No number not null,
 Address varchar(100) not null,
-City varchar(30)  not null,
+Landmark varchar(50),
 State varchar(30) not null,
-creation_date date  not null,
+City varchar(30)  not null,
+ZipCode number not null,
+creation_date varchar(20)  not null,
 Retailer_Id number,
 Foreign key (Operator_Id) references Operator(Operator_Id),
 Foreign key (Retailer_Id) references retailer(retailer_id)
@@ -33,14 +36,7 @@ CREATE SEQUENCE customer_id_seq
 START WITH 701
 INCREMENT BY 1
 
-CREATE or REPLACE TRIGGER tr_customer
-	BEFORE INSERT ON customer
-	FOR EACH ROW
-BEGIN
-  SELECT customer_id_seq.nextval
-  INTO :new.customer_id
-  FROM dual;
-END;
+
 
 
 --Operator
@@ -53,11 +49,11 @@ Operator_Id Number Primary key,
 First_Name varchar(30) Not Null,
 Last_Name varchar(30) Not Null,
 Email varchar(50) Not Null,
-Phone_No number Not Null,
-Shift_Time_Start varchar(15) Not null,
-Shift_Time_End varchar(15) not null,
+Phone_No varchar(20) Not Null,
+Shift_Time_Start varchar() Not null,
+Shift_Time_End varchar(20) not null,
 Max_No_of_Customers number not null,
-Creation_Date date not null
+Creation_Date varchar(20) not null
 )
 
 
@@ -67,14 +63,6 @@ CREATE SEQUENCE operator_id_seq
 START WITH 801
 INCREMENT BY 1
 
-CREATE or REPLACE TRIGGER tr_operator
-	BEFORE INSERT ON operator
-	FOR EACH ROW
-BEGIN
-  SELECT operator_id_seq.nextval
-  INTO :new.operator_id
-  FROM dual;
-END;
 
 
 --Retailer

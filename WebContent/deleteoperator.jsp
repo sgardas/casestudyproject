@@ -52,8 +52,10 @@ function Deletion()
                     Enter Operator ID to perform Deletion.
                 </p>
 <body>
+ <form action="Mainservlet?action=deleteoperator" method="post">
 <p>Enter the Operator ID: <input type="text" name="retid" value="" placeholder="Operator ID">
 <button onclick="Deletion()">Delete</button>
+</form>
 
 </body>
 </div>

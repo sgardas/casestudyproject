@@ -22,7 +22,6 @@ public class Mainservlet extends HttpServlet {
        
    //<span class="caret"></span>
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("keerthi");
 	    String action= request.getParameter("action");
 	    String passworddet= request.getParameter("password");
 	    String role=request.getParameter("Role");
@@ -39,27 +38,62 @@ public class Mainservlet extends HttpServlet {
 				qc.login_insert(request);
 				rd=request.getRequestDispatcher("login.jsp");
   				rd.forward(request, response);
-			
+
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+	    	  
+	    	  
+	    	
+	    	  
+	      }
+	
+	      if(action.equalsIgnoreCase("login")) {
+	    	  if(role.equalsIgnoreCase("Admin")||role.equalsIgnoreCase("Operator")||role.equalsIgnoreCase("Customer")||role.equalsIgnoreCase("Retailer")) {
+
 	    	}else if(action.equalsIgnoreCase("Customerregistration")) {
 	    		rd=request.getRequestDispatcher("CustomerRegistration.jsp");
   				rd.forward(request, response);
 	    	}else if(action.equalsIgnoreCase("login")) {
 	    		
 	    	  if(role.equalsIgnoreCase("Admin")) {
+
 	    		  System.out.println("@@@@@@admin");
 	    		  i= hc.validateattempt(passworddet);
 	    		  
 	    		  if(i==1) {
 	    			rd=request.getRequestDispatcher("passwordreset1.jsp");
 	  				rd.forward(request, response);
+
 	  			}else {
 	  				
 	  				qc.validate_login(request, response);
 	  				
+
+	  			}else 
+	  				{
+		  				try {
+							qc.validate_login(request, response);
+						} catch (ClassNotFoundException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						} catch (SQLException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+		  			
+
 	  				
 	  			}
 	    		  
-	    	  }else if(role.equalsIgnoreCase("Operator")) {
+	    	  }
+	    	}
+	    		  else if(role.equalsIgnoreCase("Operator")) {
 	    		  i=hc.validateattempt(passworddet);
                   if(i==1) {
                 	rd=request.getRequestDispatcher("passwordreset1.jsp");
@@ -100,7 +134,8 @@ public class Mainservlet extends HttpServlet {
 	    	  
 	      }else if(action.equalsIgnoreCase("operatorcreation")){
 	    	  try {
-				qc.create_operator(request);
+	    		  System.out.println("in mainservlet");
+				qc.create_operator(request,response);
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -109,6 +144,7 @@ public class Mainservlet extends HttpServlet {
 				e.printStackTrace();
 			}
 	      }
+
 	    } catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -118,9 +154,95 @@ public class Mainservlet extends HttpServlet {
 		}    
 	      
 	
+
+	      
+	      else if(action.equalsIgnoreCase("searchoperator")){
+	    	  try {
+				qc.search_operator(request,response);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	      }
+	      else if(action.equalsIgnoreCase("updateoperator")){
+	    	  try {
+				qc.update_operator(request,response);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	      }
+	      else if(action.equalsIgnoreCase("deleteoperator")){
+	    	  try {
+				qc.delete_operator(request,response);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	      }
+
 	
+	      
+	      else if(action.equalsIgnoreCase("createcustomer")){
+	    	  try {
+				qc.customer_create(request,response);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	      }
+	      
+	      else if(action.equalsIgnoreCase("searchcustomer")){
+	    	  try {
+				qc.customer_search(request,response);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	      }
+	      
+	      else if(action.equalsIgnoreCase("customerupdate")){
+	    	  try {
+				qc.customer_update(request,response);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	      }
+	      
+	      else if(action.equalsIgnoreCase("customerdelete")){
+	    	  try {
+				qc.customer_delete(request,response);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	      }
+	      
 	
 	
 	}
 
 }
+

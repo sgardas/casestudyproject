@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="styles/style.css">
 
 </head>
+<div><font size="5"><marquee>ILP DTH Services</marquee></font></div>
 
 
 <!-- Header -->
@@ -54,7 +55,7 @@
 <div class="topnav">
   
   <div class="search-container">
-    <form action="/action_page.php">
+    <form action="Mainservlet?action=searchoperator" method="post">
       <input type="text" placeholder="Enter Operator ID" name="operatorid">
       <button type="submit">Submit</button>
     </form>
