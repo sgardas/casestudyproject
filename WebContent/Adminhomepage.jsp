@@ -52,16 +52,7 @@
 
                     </ul>
                 </div>
-                <div class="btn-group">
-                    <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Retailer Management <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li><a href="Admin_retailer.jsp">Create Retailers</a></li>
-                        <li><a href="Retailer_Updation.jsp" class="font-bold">Update Retailers</a></li>
-                        <li><a href="View_Retailers.jsp">View Retailers</a></li>
-                         <li><a href="Retailer_Deletion.jsp">Delete Retailers</a></li>
-                      
-                    </ul>
-                </div>
+               
                 <div class="btn-group">
                     <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Customer Management <span class="caret"></span></button>
                     <ul class="dropdown-menu">
@@ -72,6 +63,16 @@
                     </ul>
                 </div>
                 
+                 <div class="btn-group">
+                    <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Retailer Management <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="Admin_retailer.jsp">Create Retailers</a></li>
+                        <li><a href="Retailer_Updation.jsp" class="font-bold">Update Retailers</a></li>
+                        <li><a href="View_Retailers.jsp">View Retailers</a></li>
+                         <li><a href="Retailer_Deletion.jsp">Delete Retailers</a></li>
+                      
+                    </ul>
+                </div>
                  <div class="btn-group">
                     <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Manage Channels <span class="caret"></span></button>
                     <ul class="dropdown-menu">
@@ -94,7 +95,7 @@
                     <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Manage Set-Top Boxes <span class="caret"></span></button>
                     <ul class="dropdown-menu">
                         <li><a href="#">Create SetTopbox</a></li>
-                        <li><a href="#" class="font-bold">Update Update SetTopBox</a></li>
+                        <li><a href="#" class="font-bold"> Update SetTopBox</a></li>
                         
                     </ul>
              </div>

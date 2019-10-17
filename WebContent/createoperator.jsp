@@ -13,8 +13,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Page title -->
-    <title>DTH | CustomerDisplayPage</title>
+    <title>Operator registration form</title>
 
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!--<link rel="shortcut icon" type="image/ico" href="favicon.ico" />-->
 
     <!-- Vendor styles -->
     <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css" />
@@ -43,52 +45,47 @@
     <div class="row">
         <div class="col-md-12">
             <div class="text-center m-b-md">
-                <h3>CUSTOMER DETAILS</h3>
+                <h3>CREATE OPERATOR</h3>
             </div>
             <div class="hpanel">
                 <div class="panel-body">
-                        <form action="#" id="loginForm">
-                            <div class="form-group">
-                                <label class="control-label" for="customerId">Customer Id</label>
-                                <input type="text" value="" name="customerId" id="customerId" class="form-control">
-                            </div>
+                        <form action="Mainservlet?action=operatorcreation" method="post">
+                            
                             <div class="form-group">
                                 <label class="control-label" for="firstname">Firstname</label>
-                                <input type="text" value="" name="firstname" id="firstname" class="form-control">                         
+                                <input type="text" title="Please enter your firstname" placeholder="enter your firstname" required="" value="" name="firstname" id="firstname" class="form-control">                         
                             </div>
                             <div class="form-group">
                                 <label class="control-label" for="lastname">Lastname</label>
-                                <input type="password" value="" name="lastname" id="lastname" class="form-control">
+                                <input type="text" title="Please enter your lastname" placeholder="enter your lastname" required="" value="" name="lastname" id="lastname" class="form-control">
                             </div>   
                             <div class="form-group">
                                 <label class="control-label" for="emailid">Email Id</label>
-                                <input type="text" value="" name="email" id="email" class="form-control">
+                                <input type="email" placeholder="example@gmail.com" title="enter your email id" required="" value="" name="email" id="email" class="form-control">
                                 
                             </div>   
                             <div class="form-group">
-                                <label class="control-label" for="phoneno">Phone number</label>
-                                <input type="text" value="" name="phonenum" id="phonenum" class="form-control">
+                                <label class="control-label" for="phoneno">Phone number (format: xxx-xxx-xxxx)</label>
+                                <input type="tel" pattern="^\d{3}-\d{3}-\d{4}$" required placeholder="enter your phone no" title="Please enter your Phone no" required="" value="" name="phonenum" id="phonenum" class="form-control">
                             </div>  
                             <div class="form-group">
-                                <label class="control-label" for="Address">Address</label>
-                                <input type="text"  value="" name="address" id="address" class="form-control">
+                                <label class="control-label" for="shift start time">Shift Start time </label>
+                                <input type="text"  pattern="" placeholder="enter your Shift start time" title="Please enter your shift start time" required="" value="" name="shift start time" id="shift start time" class="form-control">
                             </div> 
                             <div class="form-group">
-                                <label class="control-label" for="Landmark">Landmark</label>
-                                <input type="text" value="" name="landmark" id="landmark" class="form-control">
+                                <label class="control-label" for="shift End time">Shift End time</label>
+                                <input type="text" placeholder="enter your Shift end time" title="Please enter your shift end time" required="" value="" name="shift end time" id="shift end time" class="form-control">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="control-label" for="city">Max no of customers to be managed</label>
+                                <input type="text" placeholder="enter maximum no of customers to be managed" title="Please enter maximum number of customers to be managed" required="" value="" name="max no of customers" id="max customers" class="form-control">
                             </div> 
                             <div class="form-group">
-                                <label class="control-label" for="state">State</label>
-                                <input type="text" value="" name="state" id="state" class="form-control">
+                                <label class="control-label" for="creationdate">Creation date Format: DD.MM.YYYY</label>
+                                <input type="date" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}" required placeholder="enter your Creation date" title="Please enter your creation date" required="" value="" name="creationdate" id="creationdate" class="form-control">
                             </div> 
-                            <div class="form-group">
-                                <label class="control-label" for="city">City</label>
-                                <input type="text" value="" name="city" id="city" class="form-control">
-                            </div> 
-                            <div class="form-group">
-                                <label class="control-label" for="Zipcode">Zipcode</label>
-                                <input type="text" value="" name="zipcode" id="zipcode" class="form-control">
-                            </div> 
+
                             <style>
 .button {
   border-radius: 4px;
@@ -130,11 +127,17 @@
 }
 </style>
 
-<button class="button" onclick="window.location.href='customerview.jsp'"><span>Search Other Customers</span></button>
+<button class="button" onclick="myFunction()"><span>Create Me!</span></button>
+                         
+
+
+                            
                             
 
 
-                     
+                            
+                            
+
                         </form>
                 </div>
             </div>
