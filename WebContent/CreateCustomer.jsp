@@ -134,7 +134,7 @@
 }
 </style>
 
-<button class="button" onclick="myFunction()"><span>Create me!! </span></button>
+<button class="button" onclick="myFunction()"><span>Create </span></button>
                       
                         </form>
                 </div>
