@@ -61,12 +61,12 @@
                             </div>   
                             <div class="form-group">
                                 <label class="control-label" for="emailid">Email Id</label>
-                                <input type="text" placeholder="example@gmail.com" title="enter your email id" required="" value="" name="email" id="email" class="form-control">
+                                <input type="email" placeholder="example@gmail.com" title="enter your email id" required="" value="" name="email" id="email" class="form-control">
                                 
                             </div>   
                             <div class="form-group">
-                                <label class="control-label" for="phoneno">Phone number</label>
-                                <input type="text" placeholder="enter your phone no" title="Please enter your Phone no" required="" value="" name="phonenum" id="phonenum" class="form-control">
+                                <label class="control-label" for="phoneno">Phone number (format: xxx-xxx-xxxx)</label>
+                                <input type="tel" pattern="^\d{3}-\d{3}-\d{4}$ placeholder="enter your phone no" title="Please enter your Phone no" required="" value="" name="phonenum" id="phonenum" class="form-control">
                             </div>  
                             <div class="form-group">
                                 <label class="control-label" for="Address">Address</label>
@@ -89,8 +89,8 @@
                                 <input type="text" placeholder="enter your zipcode" title="Please enter your zipcode" required="" value="" name="zipcode" id="zipcode" class="form-control">
                             </div> 
                             <div class="form-group">
-                                <label class="control-label" for="creationdate">Creation date</label>
-                                <input type="text" placeholder="enter your Creation date" title="Please enter your creation date" required="" value="" name="creationdate" id="creationdate" class="form-control">
+                                <label class="control-label" for="creationdate">Creation date Format: DD.MM.YYYY</label>
+                                <input type="date" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}" placeholder="enter your Creation date" title="Please enter your creation date" required="" value="" name="creationdate" id="creationdate" class="form-control">
                             </div>
                             
                             <style>
