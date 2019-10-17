@@ -47,7 +47,7 @@
  
 <body>
 <p>Enter the Retailer ID: <input type="text" name="retid" value="retid" placeholder="Retailer ID">
-<button onclick=" ">Update</button>
+<button onclick="">Update</button>
 
 
 </body>

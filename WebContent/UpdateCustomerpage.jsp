@@ -49,10 +49,14 @@
             </div>
             <div class="hpanel">
                 <div class="panel-body">
-                        <form action="#" id="loginForm">
+                         <form action="Mainservlet?action=customerupdate" method="post">
                             <div class="form-group">
                                 <label class="control-label" for="customerId">Customer Id</label>
                                 <input type="text"  title="enter you customerId" placeholder="enter your customerId" required="" value="" name="customerId" id="customerId" class="form-control">
+                            </div>
+                             <div class="form-group">
+                                <label class="control-label" for="operatorId">Operator Id</label>
+                                <input type="text"  title="enter you operatorId" placeholder="enter your operatorId" required="" value="" name="operatorId" id="operatorId" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label class="control-label" for="firstname">Firstname</label>
@@ -60,7 +64,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="control-label" for="lastname">Lastname</label>
-                                <input type="password" title="Please enter your lastname" placeholder="enter your lastname"  value="" name="lastname" id="lastname" class="form-control">
+                                <input type="text" title="Please enter your lastname" placeholder="enter your lastname"  value="" name="lastname" id="lastname" class="form-control">
                             </div>   
                             <div class="form-group">
                                 <label class="control-label" for="emailid">Email Id</label>
@@ -91,9 +95,15 @@
                                 <label class="control-label" for="Zipcode">Zipcode</label>
                                 <input type="text" placeholder="enter your zipcode" title="Please enter your zipcode"  value="" name="zipcode" id="zipcode" class="form-control">
                             </div> 
-                            
-
-                            
+                            <div class="form-group">
+                                <label class="control-label" for="creationdate">Creation date</label>
+                                <input type="text" placeholder="enter your Creation date" title="Please enter your creation date" required="" value="" name="creationdate" id="creationdate" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="retailerId">Retailer Id</label>
+                                <input type="text" placeholder="enter your retailerId" title="Please enter your creation date" required="" value="" name="retailerId" id="retailerId" class="form-control">
+                            </div>
+                                        
 <style>
 .button {
   border-radius: 4px;
@@ -135,9 +145,10 @@
 }
 </style>
 
-<button class="button" onclick="window.location.href='Updation_success_page.jsp'"><span>Update </span></button>
+<button class="button" onclick="myFunction()"><span>Update </span></button>
                           
-  
+
+                            <button onclick="window.location.href='Updation_success_page.jsp'">Update</button>
 
                         </form>
                 </div>
