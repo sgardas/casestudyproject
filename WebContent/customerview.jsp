@@ -2,7 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head><h1>Customer Details Below</h1>
+<head><h2 align="center" >Customer Details </h2>
 
  <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,7 +49,7 @@
 </div>
 <hr>
 <div align="center">
-<form name="log" action="<%=request.getContextPath()%>/InfinityController?actionCheck=login" method="post">
+<form action="Mainservlet?action=searchcustomer" method="post">
 Customer Id <input type="text" name="custId" value="" required title="Enter customerId" value=""required placeholder="Enter CustomerId" onmouseover="javascript.alert('title')"/>
  <br><br>
                             <button onclick="window.location.href='customer_display.jsp'">View</button>

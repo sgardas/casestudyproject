@@ -11,6 +11,7 @@ Phone_No number Not Null
 
 --Customer
 
+
 create table customer(
 Customer_Id number primary key,
 Operator_Id number,
@@ -19,9 +20,11 @@ Last_Name varchar(30) not null,
 Email varchar(50) not null,
 Phone_No number not null,
 Address varchar(100) not null,
-City varchar(30)  not null,
+Landmark varchar(50),
 State varchar(30) not null,
-creation_date date  not null,
+City varchar(30)  not null,
+ZipCode number not null,
+creation_date varchar(20)  not null,
 Retailer_Id number,
 Foreign key (Operator_Id) references Operator(Operator_Id),
 Foreign key (Retailer_Id) references retailer(retailer_id)
