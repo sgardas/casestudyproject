@@ -1,6 +1,7 @@
 package Queryclass;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -19,10 +20,12 @@ public class querycla {
 	private PreparedStatement st=null;
     private ResultSet rs=null;
     RequestDispatcher rd= null;
-
+    
 	public querycla() {
 		// TODO Auto-generated constructor stub
 	}
+	
+
 	
 	
 	public void login_insert(HttpServletRequest request) throws ClassNotFoundException, SQLException{
@@ -50,18 +53,17 @@ public void validate_login(HttpServletRequest request, HttpServletResponse respo
 		String username=  request.getParameter("username");
 		String pwd=  request.getParameter("password");
 		String role=  request.getParameter("Role");
-		String query = "select * from login ";
-		
+		String query = "select * from login where USERNAME=? and PASSWORD=? and ROLE=?";
+		//PrintWriter pw= response.getWriter(); 
 		
 		st = con.prepareStatement(query);
-
-	
-		
+        st.setString(1, username);
+	    st.setString(2, pwd);
+		st.setString(3, role);
 		rs = st.executeQuery();
 		
-		while (rs.next()) {
-		    if(username.equals(rs.getString("username"))&& pwd.equals(rs.getString("password"))&& role.equals(rs.getString("role"))){
-		  
+		 if(rs.next()) {
+		    
 		 
 	   		if(role.equals("Admin")) {
 		    		rd=request.getRequestDispatcher("Adminhomepage.jsp");
@@ -76,18 +78,15 @@ public void validate_login(HttpServletRequest request, HttpServletResponse respo
 		    		rd=request.getRequestDispatcher("CustomerHomePage.jsp");
 	  				rd.include(request, response);
 		    	}
-		        
-		    }
-		    else {
-		    	System.out.println("Login failed");	
-		    	rd=request.getRequestDispatcher("login.jsp");
+		 }    
+		 else {
+				System.out.println("Login failed");	
+				//pw.println("Please enter valid credentials");
+				rd=request.getRequestDispatcher("invalidlogin.jsp");
 				rd.include(request, response);
-		    }
-		    }
-
-	}
+			      }
 	
-	
+}
 	
 	
 	
