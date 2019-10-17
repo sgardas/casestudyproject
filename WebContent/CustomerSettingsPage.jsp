@@ -59,7 +59,7 @@ function DeleteAccount()
 <body>
 
 </body>
-</html> <button onclick="window.location.href='#'">Edit Profile</button><br><br>
+</html> <button onclick="window.location.href='customeredit.jsp'">Edit Profile</button><br><br>
  <button onclick="window.location.href='passwordreset.jsp'">Password Change</button><br><br>
  <button onclick="DeleteAccount()">Delete My account</button><br><br>
  

@@ -13,8 +13,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Page title -->
-    <title>DTH | CustomerDisplayPage</title>
+    <title>UpdateCustomerPage</title>
 
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!--<link rel="shortcut icon" type="image/ico" href="favicon.ico" />-->
 
     <!-- Vendor styles -->
     <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css" />
@@ -27,7 +29,7 @@
    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css" /> 
     <link rel="stylesheet" href="styles/style.css">
 
-</head><div><font size="5"><marquee><strong>Infinity DTH Services</strong></marquee></font></div>
+</head><div><marquee><strong>Infinity DTH Services</strong></marquee></div>
 <body class="blank">
   
 <!-- Simple splash screen-->
@@ -43,53 +45,53 @@
     <div class="row">
         <div class="col-md-12">
             <div class="text-center m-b-md">
-                <h3>CUSTOMER DETAILS</h3>
+                <h3>UPDATE CUSTOMER</h3>
             </div>
             <div class="hpanel">
                 <div class="panel-body">
-                        <form action="#" id="loginForm">
-                            <div class="form-group">
-                                <label class="control-label" for="customerId">Customer Id</label>
-                                <input type="text" value="" name="customerId" id="customerId" class="form-control">
-                            </div>
+                         <form action="Mainservlet?action=customerupdate" method="post">
+                            
                             <div class="form-group">
                                 <label class="control-label" for="firstname">Firstname</label>
-                                <input type="text" value="" name="firstname" id="firstname" class="form-control">                         
+                                <input type="text" title="Please enter your firstname" placeholder="enter your firstname" required="" value="" name="firstname" id="firstname" class="form-control">                         
                             </div>
                             <div class="form-group">
                                 <label class="control-label" for="lastname">Lastname</label>
-                                <input type="password" value="" name="lastname" id="lastname" class="form-control">
+                                <input type="text" title="Please enter your lastname" placeholder="enter your lastname"  value="" name="lastname" id="lastname" class="form-control">
                             </div>   
                             <div class="form-group">
                                 <label class="control-label" for="emailid">Email Id</label>
-                                <input type="text" value="" name="email" id="email" class="form-control">
+                                <input type="text" placeholder="example@gmail.com" title="enter your email id" required="" value="" name="email" id="email" class="form-control">
                                 
                             </div>   
                             <div class="form-group">
-                                <label class="control-label" for="phoneno">Phone number</label>
-                                <input type="text" value="" name="phonenum" id="phonenum" class="form-control">
+                                <label class="control-label" for="phoneno">Phone number (format: xxx-xxx-xxxx)</label>
+                                <input type="tel" pattern="^\d{3}-\d{3}-\d{4}$ placeholder="enter your phone no" title="Please enter your Phone no"  value="" name="phonenum" id="phonenum" class="form-control">
                             </div>  
                             <div class="form-group">
                                 <label class="control-label" for="Address">Address</label>
-                                <input type="text"  value="" name="address" id="address" class="form-control">
+                                <input type="text" placeholder="enter your address" title="Please enter your address"  value="" name="address" id="address" class="form-control">
                             </div> 
                             <div class="form-group">
                                 <label class="control-label" for="Landmark">Landmark</label>
-                                <input type="text" value="" name="landmark" id="landmark" class="form-control">
+                                <input type="text" placeholder="enter your landmark" title="Please enter your landmark"  value="" name="landmark" id="landmark" class="form-control">
                             </div> 
                             <div class="form-group">
                                 <label class="control-label" for="state">State</label>
-                                <input type="text" value="" name="state" id="state" class="form-control">
+                                <input type="text" placeholder="enter your state" title="Please enter your state"  value="" name="state" id="state" class="form-control">
                             </div> 
                             <div class="form-group">
                                 <label class="control-label" for="city">City</label>
-                                <input type="text" value="" name="city" id="city" class="form-control">
+                                <input type="text" placeholder="enter your city" title="Please enter your city"  value="" name="city" id="city" class="form-control">
                             </div> 
                             <div class="form-group">
                                 <label class="control-label" for="Zipcode">Zipcode</label>
-                                <input type="text" value="" name="zipcode" id="zipcode" class="form-control">
+                                <input type="text" placeholder="enter your zipcode" title="Please enter your zipcode"  value="" name="zipcode" id="zipcode" class="form-control">
                             </div> 
-                            <style>
+                            
+                            
+                                        
+<style>
 .button {
   border-radius: 4px;
   background-color: Green;
@@ -130,11 +132,10 @@
 }
 </style>
 
-<button class="button" onclick="window.location.href='customerview.jsp'"><span>Search Other Customers</span></button>
-                            
+<button class="button" onclick="myFunction()"><span>Update </span></button>
+                          
 
 
-                     
                         </form>
                 </div>
             </div>

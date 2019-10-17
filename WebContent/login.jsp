@@ -29,7 +29,9 @@
    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css" /> 
     <link rel="stylesheet" href="styles/style.css">
 
-</head><div><marquee><strong>ILP DTH Services</strong></marquee></div>
+</head><div>
+
+<p style="margin-top: 1em" align="center"> <font size="5" face="sans-serif" ><strong>Infinity DTH Services</strong></font></div>
 <body class="blank">
   
 
@@ -86,7 +88,10 @@
 </div>
 
 
-
+<footer>
+  <strong><font size="5"><marquee>Try our packages at low prices. Offer lasts for a limited period only</marquee>  </strong> </font><br><br>
+  <p><font size="4">For more info Contact us at: ilptcs@infinityservices.com</p></font>
+</footer>
 
 </body>
 </html>

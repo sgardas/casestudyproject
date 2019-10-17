@@ -61,7 +61,7 @@ ADMIN HOME PAGE
                     <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Customer Management <span class="caret"></span></button>
                     <ul class="dropdown-menu">
                         <li><a href="CreateCustomer.jsp">Create Customers</a></li>
-                        <li><a href="UpdateCustomerpage.jsp" class="font-bold">Update Customers</a></li>
+                        <li><a href="updatecustomer.jsp" class="font-bold">Update Customers</a></li>
                         <li><a href="customerview.jsp">View Customers</a></li>
                          <li><a href="DeleteCustomer.jsp">Delete Customers</a></li>
                     </ul>

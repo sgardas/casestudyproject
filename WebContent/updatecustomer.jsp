@@ -1,15 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
-<head><h2 align="center" >Customer Details </h2>
+<head><h1>Customer Updation Page </h1>
 
- <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Page title -->
-    <title>DTH | Customer view</title>
+    <title>DTH | Customer Update Page</title>
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!--<link rel="shortcut icon" type="image/ico" href="favicon.ico" />-->
@@ -29,33 +29,28 @@
 
 
 <!-- Header -->
-<div id="header" align="center">
+<div id="header">
     <div class="color-line">
     </div>
+    <div id="logo" class="light-version">
+    </div>
     
-        
-
-
-
-<div class="row">
     
-        <div class="hpanel" align="center">
-            
-            <div class="panel-body float-e-margins" >
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-</head>
-<body bgcolor="lightblue">
-<div>
-</div>
-<hr>
-<div align="center">
-<form action="Mainservlet?action=searchcustomer" method="post">
-Customer Id <input type="text" name="custId" value="" required title="Enter customerId" value=""required placeholder="Enter CustomerId" onmouseover="javascript.alert('title')"/>
- <br><br>
-                            <button onclick="window.location.href='customer_display.jsp'">View</button>
+    <div class="row">
+    <div class="col-lg-6">
+        <div class="hpanel">
+           
+            <div class="panel-body float-e-margins">
+                <p>
+                    Enter Customer ID to perform Updation.
+                </p>
+ 
+<body>
+<p>Enter the Customer ID: <input type="text" name="cusid" value="cusid" placeholder="Customer ID">
 
- </form>
- </div>
+<button onclick="window.location.href = 'UpdateCustomerpage.jsp';">Update</button>
+
 
 </body>
+</div>
 </html>

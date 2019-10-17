@@ -29,7 +29,11 @@ public class Mainservlet extends HttpServlet {
 	 
 	    int i;
 	    try {
+
 	    
+
+	    Helperclass hc= new Helperclass();
+
 	    //<a class="btn btn-default btn-block" href="#">Register</a>
 	      if(action.equalsIgnoreCase("Afterpasswordreset")) {
 	    	  System.out.println("ks----------");
@@ -38,6 +42,25 @@ public class Mainservlet extends HttpServlet {
 				qc.login_insert(request);
 				rd=request.getRequestDispatcher("login.jsp");
   				rd.forward(request, response);
+
+
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+	    	  
+	    	  
+	    	
+	    	  
+	      }
+	
+	      if(action.equalsIgnoreCase("login")) {
+	    	  if(role.equalsIgnoreCase("Admin")||role.equalsIgnoreCase("Operator")||role.equalsIgnoreCase("Customer")||role.equalsIgnoreCase("Retailer")) {
+
 
 			}else if(action.equalsIgnoreCase("Customerregistration")) {
 	    		rd=request.getRequestDispatcher("CustomerRegistration.jsp");
@@ -54,6 +77,26 @@ public class Mainservlet extends HttpServlet {
 	  				rd.forward(request, response);
 
 	  			}else {
+
+
+	  				
+	  				qc.validate_login(request, response);
+	  				
+
+	  			}else 
+	  				{
+		  				try {
+							qc.validate_login(request, response);
+						} catch (ClassNotFoundException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						} catch (SQLException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+		  			
+
+
 	  				
 	  				qc.validate_login(request, response);
 	  				
@@ -103,8 +146,33 @@ public class Mainservlet extends HttpServlet {
 	    	  
 	    		  System.out.println("in mainservlet");
 				qc.create_operator(request,response);
+
 			}  else if(action.equalsIgnoreCase("searchoperator")){
 	    	 
+
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	      }
+
+	    } catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}    
+	      
+	
+
+	      
+	      else if(action.equalsIgnoreCase("searchoperator")){
+	    	  try {
+
 				qc.search_operator(request,response);
 			} else if(action.equalsIgnoreCase("updateoperator")){
 	    	  
@@ -114,9 +182,25 @@ public class Mainservlet extends HttpServlet {
 	      else if(action.equalsIgnoreCase("deleteoperator")){
 	    	  
 				qc.delete_operator(request,response);
+
 			} 
 	       else if(action.equalsIgnoreCase("createcustomer")){
 	    	  
+
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	      }
+
+	
+	      
+	      else if(action.equalsIgnoreCase("createcustomer")){
+	    	  try {
+
 				qc.customer_create(request,response);
 			
 	      }else if(action.equalsIgnoreCase("searchcustomer")){
