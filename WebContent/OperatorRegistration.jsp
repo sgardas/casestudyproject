@@ -27,7 +27,7 @@
    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css" /> 
     <link rel="stylesheet" href="styles/style.css">
 
-</head><div><marquee><strong>Infinity DTH Services</strong></marquee></div>
+</head><div><font size="5"><marquee><strong>Infinity DTH Services</strong></marquee></font></div>
 <body class="blank">
   
 <!-- Simple splash screen-->

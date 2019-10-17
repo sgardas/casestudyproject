@@ -52,36 +52,79 @@
                             <div>
 			<div class="form-group">
                                 <label class="control-label" for="contact">Retailer Contact2</label>
-                                <input type="password" title="Please enter your contact" required="" value="" name="contact" id="contact" class="form-control">
+                                <input type="password" title="Please enter your contact"  value="" name="contact" id="contact" class="form-control">
                                 
                             </div>
 			<div class="form-group">
                                 <label class="control-label" for="address">Retailer Address1</label>
-                                <input type="password" title="Please enter your address"  required="" value="" name="address" id="address" class="form-control">
+                                <input type="password" title="Please enter your address"   value="" name="address" id="address" class="form-control">
                                 
                             </div>
 			<div class="form-group">
                                 <label class="control-label" for="address">Retailer Address2</label>
-                                <input type="password" title="Please enter your address"  required="" value="" name="address" id="address" class="form-control">
+                                <input type="password" title="Please enter your address"   value="" name="address" id="address" class="form-control">
                                 
                             </div>
 			<div class="form-group">
                                 <label class="control-label" for="zipcode">Zipcode</label>
-                                <input type="password" title="Please enter your zipcode" required="" value="" name="zipcode" id="zipcode" class="form-control">
+                                <input type="password" title="Please enter your zipcode" value="" name="zipcode" id="zipcode" class="form-control">
                                 
                             </div>
 			<div class="form-group">
                                 <label class="control-label" for="city">City</label>
-                                <input type="password" title="Please enter your city" required="" value="" name="city" id="city" class="form-control">
+                                <input type="password" title="Please enter your city"  value="" name="city" id="city" class="form-control">
                                 
                             </div>
 			<div class="form-group">
                                 <label class="control-label" for="state">State</label>
-                                <input type="password" title="Please enter your state" required="" value="" name="state" id="state" class="form-control">
+                                <input type="password" title="Please enter your state" value="" name="state" id="state" class="form-control">
                                 
                             </div>
-							</div><br>                   
-                            <button class="btn btn-success btn-block" onclick="myFunction()">Add Retailer</button>
+							</div><br> 
+							
+						<style>
+.button {
+  border-radius: 4px;
+  background-color: Green;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  width: 370px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+
+<button class="button" onclick="myFunction()"><span>Add Retailer </span></button>                  
+                     
                             
                         </form>
                 </div>
