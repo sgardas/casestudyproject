@@ -32,39 +32,39 @@
     <link rel="stylesheet" href="styles/style.css">
 
 </head>
+<div><font size="5"><marquee>ILP DTH Services</marquee></font></div>
 
-
+<body>
 <!-- Header -->
 <div id="header" align="center">
     <div class="color-line">
     </div>
     
-        
+ </div>       
 
 
 
 <div class="row">
     
-        <div class="hpanel" align="center">
+        
             
-            <div class="panel-body float-e-margins" >
-</head>
-<body>
+            <div class="panel-body float-e-margins" ></div>
+           
+
+</div>
 
 <div class="topnav">
-  
+  <div class="hpanel" align="center">
   <div class="search-container">
     <form action="Mainservlet?action=searchoperator" method="post">
       <input type="text" placeholder="Enter Operator ID" name="operatorid">
-      <button type="submit">Submit</button>
+      <input type="submit" value="submit">
     </form>
   </div>
 </div>
-
+ </div>
 
 
 </body>
 </html>
 
-</body>
-</html>
