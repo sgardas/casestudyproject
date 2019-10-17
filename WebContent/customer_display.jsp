@@ -27,7 +27,7 @@
    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css" /> 
     <link rel="stylesheet" href="styles/style.css">
 
-</head><div><font size="5"><marquee><strong>Infinity DTH Services</strong></marquee></font></div>
+</head><div><marquee><strong>Infinity DTH Services</strong></marquee></div>
 <body class="blank">
   
 <!-- Simple splash screen-->
@@ -130,10 +130,12 @@
 }
 </style>
 
-<button class="button" onclick="window.location.href='customerview.jsp'"><span>Search Other Customers</span></button>
+<button class="button" onclick="window.location.href='ViewCustomer.jsp'"><span>Search Other Customers</span></button>
                             
-
-
+<<<<<<< HEAD
+=======
+                            <button class="btn btn-success btn-block" onclick="window.location.href='customerview.jsp'">SEARCH OTHER CUSTOMERS</button>
+>>>>>>> ead1fba9982bb164b7745983567c2747937f1b4e
                      
                         </form>
                 </div>

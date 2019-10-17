@@ -28,17 +28,15 @@ public class Mainservlet extends HttpServlet {
 	    RequestDispatcher rd= null;
 	    querycla qc= new querycla();
 	    int i;
-	    try {
 	    Helperclass hc= new Helperclass();
 	    //<a class="btn btn-default btn-block" href="#">Register</a>
 	      if(action.equalsIgnoreCase("Afterpasswordreset")) {
 	    	  System.out.println("ks----------");
 	    	  
-	    	  
+	    	  try {
 				qc.login_insert(request);
 				rd=request.getRequestDispatcher("login.jsp");
   				rd.forward(request, response);
-
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -60,7 +58,6 @@ public class Mainservlet extends HttpServlet {
 	    		rd=request.getRequestDispatcher("CustomerRegistration.jsp");
   				rd.forward(request, response);
 	    	}else if(action.equalsIgnoreCase("login")) {
-	    		
 	    	  if(role.equalsIgnoreCase("Admin")) {
 
 	    		  System.out.println("@@@@@@admin");
@@ -69,12 +66,6 @@ public class Mainservlet extends HttpServlet {
 	    		  if(i==1) {
 	    			rd=request.getRequestDispatcher("passwordreset1.jsp");
 	  				rd.forward(request, response);
-
-	  			}else {
-	  				
-	  				qc.validate_login(request, response);
-	  				
-
 	  			}else 
 	  				{
 		  				try {
@@ -87,7 +78,6 @@ public class Mainservlet extends HttpServlet {
 							e.printStackTrace();
 						}
 		  			
-
 	  				
 	  			}
 	    		  
@@ -99,9 +89,8 @@ public class Mainservlet extends HttpServlet {
                 	rd=request.getRequestDispatcher("passwordreset1.jsp");
 	  				rd.forward(request, response);
 	  			}else {
-	  				qc.validate_login(request, response);
-	  				//rd=request.getRequestDispatcher("OperatorHomePage.jsp");
-	  				//rd.include(request, response);
+	  				rd=request.getRequestDispatcher("Adminhomepage.jsp");
+	  				rd.include(request, response);
 	  				
 	  			}
 	    		  
@@ -111,9 +100,8 @@ public class Mainservlet extends HttpServlet {
                 	rd=request.getRequestDispatcher("passwordreset1.jsp");
 	  				rd.forward(request, response);
 	  			}else {
-	  				qc.validate_login(request, response);
-	  				//rd=request.getRequestDispatcher("Retailorhomepage.jsp");
-	  				//rd.include(request, response);
+	  				rd=request.getRequestDispatcher("Adminhomepage.jsp");
+	  				rd.include(request, response);
 	  				
 	  			}
 	    		  
@@ -123,9 +111,8 @@ public class Mainservlet extends HttpServlet {
                 	rd=request.getRequestDispatcher("passwordreset1.jsp");
 	  				rd.forward(request, response);
 	  			}else {
-	  				qc.validate_login(request, response);
-	  				//rd=request.getRequestDispatcher("CustomerHomePage.jsp");
-	  				//rd.include(request, response);
+	  				rd=request.getRequestDispatcher("Adminhomepage.jsp");
+	  				rd.include(request, response);
 	  				
 	  			}
 	    		  
@@ -144,17 +131,6 @@ public class Mainservlet extends HttpServlet {
 				e.printStackTrace();
 			}
 	      }
-
-	    } catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}    
-	      
-	
-
 	      
 	      else if(action.equalsIgnoreCase("searchoperator")){
 	    	  try {
@@ -189,7 +165,6 @@ public class Mainservlet extends HttpServlet {
 				e.printStackTrace();
 			}
 	      }
-
 	
 	      
 	      else if(action.equalsIgnoreCase("createcustomer")){

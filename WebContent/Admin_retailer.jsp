@@ -45,39 +45,39 @@
                          
                             </div>
                             <div class="form-group">
-                                <label class="control-label" for="contact">Retailer Contact1 (format: xxx-xxx-xxxx)</label>
-                                <input type="tel" pattern="^\d{3}-\d{3}-\d{4}$" title="Please enter your contact"  required="" value="" name="contact" id="contact" class="form-control">
+                                <label class="control-label" for="contact">Retailer Contact1</label>
+                                <input type="password" title="Please enter your contact"  required="" value="" name="contact" id="contact" class="form-control">
                                 
                             </div>
                             <div>
 			<div class="form-group">
-                                <label class="control-label" for="contact">Retailer Contact2 (format: xxx-xxx-xxxx)</label>
-                                <input type="tel" pattern="^\d{3}-\d{3}-\d{4}$" title="Please enter your contact"  value="" name="contact" id="contact" class="form-control">
+                                <label class="control-label" for="contact">Retailer Contact2</label>
+                                <input type="password" title="Please enter your contact"  value="" name="contact" id="contact" class="form-control">
                                 
                             </div>
 			<div class="form-group">
                                 <label class="control-label" for="address">Retailer Address1</label>
-                                <input type="text" title="Please enter your address"   value="" name="address" id="address" class="form-control">
+                                <input type="password" title="Please enter your address"   value="" name="address" id="address" class="form-control">
                                 
                             </div>
 			<div class="form-group">
                                 <label class="control-label" for="address">Retailer Address2</label>
-                                <input type="text" title="Please enter your address"   value="" name="address" id="address" class="form-control">
+                                <input type="password" title="Please enter your address"   value="" name="address" id="address" class="form-control">
                                 
                             </div>
 			<div class="form-group">
                                 <label class="control-label" for="zipcode">Zipcode</label>
-                                <input type="text" title="Please enter your zipcode" value="" name="zipcode" id="zipcode" class="form-control">
+                                <input type="password" title="Please enter your zipcode" value="" name="zipcode" id="zipcode" class="form-control">
                                 
                             </div>
 			<div class="form-group">
                                 <label class="control-label" for="city">City</label>
-                                <input type="text" title="Please enter your city"  value="" name="city" id="city" class="form-control">
+                                <input type="password" title="Please enter your city"  value="" name="city" id="city" class="form-control">
                                 
                             </div>
 			<div class="form-group">
                                 <label class="control-label" for="state">State</label>
-                                <input type="text" title="Please enter your state" value="" name="state" id="state" class="form-control">
+                                <input type="password" title="Please enter your state" value="" name="state" id="state" class="form-control">
                                 
                             </div>
 							</div><br> 
@@ -133,6 +133,7 @@
     </div>
     <div class="row">
         <div class="col-md-12 text-center">
+             
     </div>
 </div>
 
