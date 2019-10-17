@@ -148,7 +148,6 @@
 <button class="button" onclick="myFunction()"><span>Update </span></button>
                           
 
-                            <button onclick="window.location.href='Updation_success_page.jsp'">Update</button>
 
                         </form>
                 </div>
