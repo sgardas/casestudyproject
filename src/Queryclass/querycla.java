@@ -1,7 +1,6 @@
 package Queryclass;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -45,48 +44,50 @@ public class querycla {
 		rs = st.executeQuery();
 
 	}
-
-	
 public void validate_login(HttpServletRequest request, HttpServletResponse response) throws ClassNotFoundException, SQLException, ServletException, IOException{
-	
-	
-	String username=  request.getParameter("username");
-	String pwd=  request.getParameter("password");
-	String role=  request.getParameter("Role");
-	String query = "select * from login where USERNAME=? and PASSWORD=?";
-	PrintWriter pw= response.getWriter(); 
-	
-	st = con.prepareStatement(query);
-    st.setString(1, username);
-    st.setString(2, pwd);
-	
-	rs = st.executeQuery();
-	
-	 if(rs.next()) {
-	    
-	 
-   		if(role.equals("Admin")) {
-	    		rd=request.getRequestDispatcher("Adminhomepage.jsp");
-  				rd.include(request, response);
-	    	}
-	    	else if (role.equals("Operator")) {
-	    		rd=request.getRequestDispatcher("OperatorHomePage.jsp");
-  				rd.include(request, response);
-	    	}
-	    	else if(role.equals("Customer")){
-	    		System.out.println("in customer");
-	    		rd=request.getRequestDispatcher("CustomerHomePage.jsp");
-  				rd.include(request, response);
-	    	}
-	 }    
-	    else {
-	System.out.println("Login failed");	
-	pw.println("Please enter valid credentials");
-	rd=request.getRequestDispatcher("login.jsp");
-	rd.include(request, response);
-      }
+		
+		
+		String username=  request.getParameter("username");
+		String pwd=  request.getParameter("password");
+		String role=  request.getParameter("Role");
+		String query = "select * from login ";
+		
+		
+		st = con.prepareStatement(query);
 
-}
+	
+		
+		rs = st.executeQuery();
+		
+		while (rs.next()) {
+		    if(username.equals(rs.getString("username"))&& pwd.equals(rs.getString("password"))&& role.equals(rs.getString("role"))){
+		  
+		 
+	   		if(role.equals("Admin")) {
+		    		rd=request.getRequestDispatcher("Adminhomepage.jsp");
+	  				rd.include(request, response);
+		    	}
+		    	else if (role.equals("Operator")) {
+		    		rd=request.getRequestDispatcher("OperatorHomePage.jsp");
+	  				rd.include(request, response);
+		    	}
+		    	else if(role.equals("Customer")){
+		    		System.out.println("in customer");
+		    		rd=request.getRequestDispatcher("CustomerHomePage.jsp");
+	  				rd.include(request, response);
+		    	}
+		        
+		    }
+		    else {
+		    	System.out.println("Login failed");	
+		    	rd=request.getRequestDispatcher("login.jsp");
+				rd.include(request, response);
+		    }
+		    }
+
+	}
+	
+	
 	
 	
 	
