@@ -31,7 +31,7 @@
 
 </head><div>
 
-<p style="margin-top: 1em" align="center"> <font size="5" face="sans-serif" ><strong>ILP DTH Services</strong></font></div>
+<p style="margin-top: 1em" align="center"> <font size="5" face="sans-serif" ><strong>Infinity DTH Services</strong></font></div>
 <body class="blank">
   
 
@@ -89,7 +89,7 @@
 
 
 <footer>
-  <strong><font size="5"><marquee>Try our packages at low prices. Offer lasts for a limited period only</marquee>  </strong> </font><br>
+  <strong><font size="5"><marquee>Try our packages at low prices. Offer lasts for a limited period only</marquee>  </strong> </font><br><br>
   <p><font size="4">For more info Contact us at: ilptcs@infinityservices.com</p></font>
 </footer>
 
