@@ -45,13 +45,13 @@
                          
                             </div>
                             <div class="form-group">
-                                <label class="control-label" for="contact">Retailer Contact1</label>
+                                <label class="control-label" for="contact">Retailer Contact1 (format: xxx-xxx-xxxx)</label>
                                 <input type="tel" pattern="^\d{3}-\d{3}-\d{4}$" title="Please enter your contact"  required="" value="" name="contact" id="contact" class="form-control">
                                 
                             </div>
                             <div>
 			<div class="form-group">
-                                <label class="control-label" for="contact">Retailer Contact2</label>
+                                <label class="control-label" for="contact">Retailer Contact2 (format: xxx-xxx-xxxx)</label>
                                 <input type="tel" pattern="^\d{3}-\d{3}-\d{4}$" title="Please enter your contact"  value="" name="contact" id="contact" class="form-control">
                                 
                             </div>
