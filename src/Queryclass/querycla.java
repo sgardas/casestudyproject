@@ -1,11 +1,15 @@
 package Queryclass;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import jdbccon.jdbcclass;
 
@@ -17,6 +21,51 @@ public class querycla {
 
 	public querycla() {
 		// TODO Auto-generated constructor stub
+	}
+	
+public void validate_login(HttpServletRequest request, HttpServletResponse response) throws ClassNotFoundException, SQLException, ServletException, IOException{
+		
+	  System.out.println("ks");
+		
+		String username=  request.getParameter("username");
+		String pwd=  request.getParameter("password");
+		String role=  request.getParameter("Role");
+		String query = "select * from login";
+		RequestDispatcher rd= null;
+		
+		st = con.prepareStatement(query);
+		//st.setString(1, username);
+	
+		
+		rs = st.executeQuery();
+		
+		while (rs.next()) {
+			 System.out.println("khg");
+		    if(username.equals(rs.getString("username"))&& pwd.equals(rs.getString("password"))&& role.contentEquals(rs.getString("role"))){
+		  
+		 
+	   		if(role.equals("Admin")) {
+		    		rd=request.getRequestDispatcher("Adminhomepage.jsp");
+	  				rd.include(request, response);
+		    	}
+		    	else if (role.equals("Operator")) {
+		    		rd=request.getRequestDispatcher("OperatorHomePage.jsp");
+	  				rd.include(request, response);
+		    	}
+		    	else if(role.equals("Customer")){
+		    		System.out.println("in customer");
+		    		rd=request.getRequestDispatcher("CustomerHomePage.jsp");
+	  				rd.include(request, response);
+		    	}
+		        
+		    }
+		    else {
+		    	System.out.println("Login failed");	
+		    	rd=request.getRequestDispatcher("login.jsp");
+				rd.include(request, response);
+		    }
+		    }
+
 	}
 	
 	
